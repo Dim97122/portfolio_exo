@@ -4,30 +4,30 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import Navbar from '../Navbar';
+import GlobalNavbar from '../Navbar/Global_Navbar';
 import Home from '../../pages/Home';
-import Documentation from '../../pages/Documentation';
+import Contact from '../../pages/Contact';
 import About from '../../pages/About';
-import Book from '../Book';
+import Works from '../../pages/Works';
 
 const App = () => {
  return (
     <>
       < Router >
-        < Navbar />
+        < GlobalNavbar />
         < Switch >
           < Route path="/about" >
             < About />
           </ Route>
-          < Route path="/documentation">
-            < Documentation />
+          < Route path="/contact">
+            < Contact />
           </Route>
+          < Route path={`/works`}>
+            < Works />
+          </ Route >
           < Route exact path="/">
             < Home />
           </ Route>
-          < Route path={`/books/:bookSlug`}>
-            < Book />
-          </ Route >
         </ Switch >
       </ Router >
     </>

@@ -1,13 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import books from '../../data/books'
 
-const Navbar = () => {
-  const listBooks = books.map((book) =>
-  <li key={book}>
-    <Link to={`/books/${book.slug}`}>{book.title}</Link>
-  </li>
-);
+const GlobalNavbar = () => {
   return (
     <nav>
       <ul>
@@ -20,11 +14,11 @@ const Navbar = () => {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
-      </ul>
-      <ul>
-        { listBooks }
+        <li>
+          <Link to="/works">Works</Link>
+        </li>
       </ul>
     </nav>
   );
 }
-export default Navbar;
+export default GlobalNavbar;
